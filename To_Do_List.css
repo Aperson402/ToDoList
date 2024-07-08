@@ -1,0 +1,93 @@
+/* CSS styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styles for the heading */
+h2 {
+    color: #333;
+}
+
+/* Styles for the input field */
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+/* Styles for the add button */
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #218838;
+}
+
+/* Styles for the task list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Styles for each task item */
+li {
+    position: relative;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 12px; /* Reduce padding to make the border smaller */
+    font-size: 12px; /* Reduce font size to make the text smaller */
+    border: 1px solid #ddd;
+    padding-left: 30px; /* Add space for the circle */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for the circle marker */
+li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+
+/* Styles when a task is completed */
+li.completed::before {
+    background-color: #04AA6D; /* Filled color for the circle */
+    border-color: #04AA6D;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Styles for the delete button */
+.delete-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
